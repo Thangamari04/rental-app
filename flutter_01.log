@@ -1,0 +1,101 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+RPCError: getVM: (-32000) Service connection disposed
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:261:34)
+#1      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1778:25)
+#2      VmService._call (package:vm_service/src/vm_service.dart:1790:8)
+#3      VmService.getVM (package:vm_service/src/vm_service.dart:1245:25)
+#4      FlutterDevice.initLogReader (package:flutter_tools/src/resident_runner.dart:428:55)
+#5      HotRunner.attach (package:flutter_tools/src/run_hot.dart:266:21)
+<asynchronous suspension>
+#6      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:867:27)
+<asynchronous suspension>
+#7      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1408:27)
+<asynchronous suspension>
+#8      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#9      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#10     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:420:9)
+<asynchronous suspension>
+#11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#12     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+<asynchronous suspension>
+#13     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+<asynchronous suspension>
+#14     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#15     main (package:flutter_tools/executable.dart:93:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.24.4, on Ubuntu 22.04.5 LTS 5.15.0-43-generic,
+    locale en_IN)
+    [32m•[39m Flutter version 3.24.4 on channel stable at /home/thangam/dev/flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 603104015d (4 weeks ago), 2024-10-24 08:01:25 -0700
+    [32m•[39m Engine revision db49896cf2
+    [32m•[39m Dart version 3.5.4
+    [32m•[39m DevTools version 2.37.3
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    [32m•[39m Android SDK at /home/thangam/Android/Sdk
+    [32m•[39m Platform android-35, build-tools 35.0.0
+    [32m•[39m Java binary at: /snap/android-studio/161/jbr/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      17.0.10+0-17.0.10b1087.21-11609105)
+    [32m•[39m All Android licenses accepted.
+
+[31m[✗][39m Chrome - develop for the web (Cannot find Chrome executable at
+    google-chrome)
+    [33m![39m Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[31m[✗][39m Linux toolchain - develop for Linux desktop
+    [31m✗[39m clang++ is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install clang),
+      or can be downloaded from https://releases.llvm.org/
+    [31m✗[39m CMake is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install cmake),
+      or can be downloaded from https://cmake.org/download/
+    [31m✗[39m ninja is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install
+      ninja-build), or can be downloaded from
+      https://github.com/ninja-build/ninja/releases
+    [31m✗[39m pkg-config is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install
+      pkg-config), or can be downloaded from
+      https://www.freedesktop.org/wiki/Software/pkg-config/
+
+[32m[✓][39m Android Studio (version 2024.1)
+    [32m•[39m Android Studio at /snap/android-studio/161
+    [32m•[39m Flutter plugin version 82.1.2
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      17.0.10+0-17.0.10b1087.21-11609105)
+
+[32m[✓][39m VS Code (version 1.95.2)
+    [32m•[39m VS Code at /usr/share/code
+    [32m•[39m Flutter extension version 3.100.0
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m Linux (desktop) • linux • linux-x64 • Ubuntu 22.04.5 LTS 5.15.0-43-generic
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
