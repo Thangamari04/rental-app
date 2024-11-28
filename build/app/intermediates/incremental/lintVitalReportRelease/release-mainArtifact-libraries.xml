@@ -1,8 +1,8 @@
 <libraries>
   <library
-      name="__local_aars__:/home/thangam/my_flutter_pages/rental_app/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/home/thangam/my_flutter_pages/rental_app/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/home/thangam/my_flutter_pages/rental_app/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/home/thangam/rental_app/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/home/thangam/rental_app/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/home/thangam/rental_app/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
       name="io.flutter:flutter_embedding_release:1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa@jar"
       jars="/home/thangam/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_release/1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa/9ff06a3e2b6d378066ecec963d00d5d3b288f37/flutter_embedding_release-1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa.jar"

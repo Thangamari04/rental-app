@@ -1,0 +1,1 @@
+ /home/thangam/rental_app/.dart_tool/flutter_build/d20234cf211d0950c28241564986fb35/native_assets.yaml: 

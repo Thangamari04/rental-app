@@ -980,7 +980,7 @@
             "outputFile": "com.example.rental_app-merged_res-27:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "/home/thangam/my_flutter_pages/rental_app/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/thangam/rental_app/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -1149,7 +1149,7 @@
                     }
                 },
                 {
-                    "source": "/home/thangam/my_flutter_pages/rental_app/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/thangam/rental_app/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
