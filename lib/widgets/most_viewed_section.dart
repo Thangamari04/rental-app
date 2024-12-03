@@ -1,5 +1,21 @@
 import 'package:flutter/material.dart';
 
+class MostViewedItem {
+  final String imagePath;
+  final String price;
+  final double stars;
+  final String description;
+  final String details;
+
+  MostViewedItem({
+    required this.imagePath,
+    required this.price,
+    required this.stars,
+    required this.description,
+    required this.details,
+  });
+}
+
 class MostViewedSection extends StatelessWidget {
   const MostViewedSection({super.key});
 
@@ -7,6 +23,33 @@ class MostViewedSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+
+    final List<MostViewedItem> mostViewedItems = [
+      MostViewedItem(
+        imagePath:
+            "https://media.istockphoto.com/id/856794670/photo/beautiful-luxury-home-exterior-with-green-grass-and-landscaped-yard.jpg?s=612x612&w=0&k=20&c=Jaun3vYekdy6aBcqq5uDQp_neNp5jmdLZXZAqqhcjk8=",
+        price: "\$120",
+        stars: 4.5,
+        description: "Cozy Apartment",
+        details: "Private room / 4 beds",
+      ),
+      MostViewedItem(
+        imagePath:
+            "https://t3.ftcdn.net/jpg/06/12/94/66/360_F_612946628_09a2AaQjN4BYyK81hZqENHlCdEyOLoX5.jpg",
+        price: "\$150",
+        stars: 4.8,
+        description: "Modern Villa",
+        details: "Entire house / 6 beds",
+      ),
+      MostViewedItem(
+        imagePath:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzx8ZdbMdsR_FmOTHx8wC01oC5l7qGNVSww&s",
+        price: "\$200",
+        stars: 5.0,
+        description: "Luxury Suite",
+        details: "Private suite / 2 beds",
+      ),
+    ];
 
     return SingleChildScrollView(
       child: Padding(
@@ -27,37 +70,19 @@ class MostViewedSection extends StatelessWidget {
             ),
             SizedBox(height: screenHeight * 0.02),
             Column(
-              children: [
-                _buildMostViewedItem(
-                  imagePath:
-                      "https://media.istockphoto.com/id/856794670/photo/beautiful-luxury-home-exterior-with-green-grass-and-landscaped-yard.jpg?s=612x612&w=0&k=20&c=Jaun3vYekdy6aBcqq5uDQp_neNp5jmdLZXZAqqhcjk8=",
-                  price: "\$120",
-                  stars: 4.5,
-                  description: "Cozy Apartment",
-                  details: "Private room / 4 beds",
-                  context: context,
-                ),
-                SizedBox(height: screenHeight * 0.02),
-                _buildMostViewedItem(
-                  imagePath:
-                      "https://t3.ftcdn.net/jpg/06/12/94/66/360_F_612946628_09a2AaQjN4BYyK81hZqENHlCdEyOLoX5.jpg",
-                  price: "\$150",
-                  stars: 4.8,
-                  description: "Modern Villa",
-                  details: "Entire house / 6 beds",
-                  context: context,
-                ),
-                SizedBox(height: screenHeight * 0.02),
-                _buildMostViewedItem(
-                  imagePath:
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzx8ZdbMdsR_FmOTHx8wC01oC5l7qGNVSww&s",
-                  price: "\$200",
-                  stars: 5.0,
-                  description: "Luxury Suite",
-                  details: "Private suite / 2 beds",
-                  context: context,
-                ),
-              ],
+              children: mostViewedItems.map((item) {
+                return Padding(
+                  padding: EdgeInsets.only(bottom: screenHeight * 0.02),
+                  child: _buildMostViewedItem(
+                    imagePath: item.imagePath,
+                    price: item.price,
+                    stars: item.stars,
+                    description: item.description,
+                    details: item.details,
+                    context: context,
+                  ),
+                );
+              }).toList(),
             ),
           ],
         ),

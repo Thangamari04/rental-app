@@ -1,4 +1,4 @@
-#Wed Nov 27 16:35:24 IST 2024
+#Tue Dec 03 16:44:28 IST 2024
 base.0=/home/thangam/rental_app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
